@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Otus",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "${workspaceFolder:otus_c_dev}/hw1.1_unicode", // "${workspaceFolder}", | "${command:cmake.launchTargetDirectory}",
+            "args": [
+                "test/cp1251.txt"
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing"
+                },
+                {
+                    "description": "Skip system headers",
+                    "text": "skip -gfi /usr/include"
+                },
+                {
+                    "description": "Skip bits headers",
+                    "text": "skip -gfi **/bits/*.h"
+                },
+                {
+                    "description": "Skip system (regex)",
+                    "text": "skip -rfu ^(__.*|std::.*|__gnu_cxx::.*)$"
+                }
+            ],
+            "logging": {
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false
+            }
+        }
+    ]
+}
