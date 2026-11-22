@@ -1,0 +1,5 @@
+# You own the whole repository.
+/* @ngenuine
+
+# Protect CODEOWNERS configuration itself.
+/.github/ @ngenuine
