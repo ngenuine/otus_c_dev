@@ -1,5 +1,6 @@
 {
     "cmake.sourceDirectory": [
         "${workspaceFolder:otus_c_dev}/1_datatypes",
+        "${workspaceFolder:otus_c_dev}/hw1.1_unicode",
     ]
 }
